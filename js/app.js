@@ -52,9 +52,9 @@
   }
 
   function renderResult(card, animate) {
-    elements.meta.textContent = card.arcana === "major" ? "MAJOR ARCANA · UPRIGHT" : card.suit.toUpperCase() + " · UPRIGHT";
+    elements.meta.textContent = card.arcana === "major" ? "MAJOR ARCANA" : card.suit.toUpperCase();
     elements.name.textContent = card.name;
-    elements.nameKo.textContent = card.nameKo + " · 정방향";
+    elements.nameKo.textContent = card.nameKo;
     elements.interpretation.textContent = card.interpretation;
     elements.button.hidden = true;
     elements.result.hidden = false;
@@ -122,4 +122,3 @@
 
   init();
 }());
-
