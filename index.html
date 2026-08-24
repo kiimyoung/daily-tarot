@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11142f">
+  <meta name="description" content="하루 한 장의 카드로 잠시 나를 돌아보는 Daily Tarot">
+  <title>Daily Tarot — 오늘의 카드</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="site-header">
+      <p class="eyebrow">DAILY TAROT</p>
+      <h1>오늘, 마음이 머무는 곳</h1>
+      <time id="today" class="today"></time>
+    </header>
+
+    <section class="reading" aria-labelledby="reading-guide">
+      <p id="reading-guide" class="guide">잠시 숨을 고르고, 오늘의 나에게 필요한 메시지를 만나보세요.</p>
+
+      <div id="card-scene" class="card-scene">
+        <div id="card" class="card" aria-hidden="true">
+          <div class="card-face card-back">
+            <img src="images/cards/ui/CardBacks.png" alt="보라색 무늬의 타로 카드 뒷면">
+          </div>
+          <div class="card-face card-front">
+            <img id="card-image" src="images/cards/ui/CardBacks.png" alt="">
+            <img class="card-frame" src="images/cards/ui/CardFrame.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <button id="draw-button" class="draw-button" type="button">오늘의 카드 보기</button>
+      <p id="image-error" class="error-message" role="alert" hidden></p>
+
+      <section id="result" class="result" aria-live="polite" aria-atomic="true" hidden>
+        <p id="card-meta" class="card-meta"></p>
+        <h2 id="card-name"></h2>
+        <p id="card-name-ko" class="card-name-ko"></p>
+        <p id="interpretation" class="interpretation"></p>
+        <p class="keep-note">오늘의 카드는 하루 동안 유지돼요. 내일 다시 만나요.</p>
+      </section>
+    </section>
+  </main>
+
+  <noscript><p class="noscript">오늘의 카드를 보려면 브라우저에서 JavaScript를 활성화해 주세요.</p></noscript>
+  <script src="js/tarot-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
